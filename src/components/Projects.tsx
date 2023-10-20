@@ -6,7 +6,7 @@ const PROJECTS = [
 
 const Projects: React.FC = () => {
     return (
-        <div className="flex-1 space-y-8">
+        <div id="projects" className="flex-1 space-y-8">
             {PROJECTS.map(project => (
                 <div key={project.title} className="bg-white p-6 rounded-lg shadow-md w-80 h-40 lg:w-96 lg:h-56">
                     <h2 className="text-2xl font-semibold mb-4">{project.title}</h2>

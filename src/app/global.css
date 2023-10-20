@@ -1,0 +1,70 @@
+/* global.css */
+:root {
+    --primary: #PLACEHOLDER_FOR_PRIMARY;
+    --background: #PLACEHOLDER_FOR_BACKGROUND;
+    --light-bg: #PLACEHOLDER_FOR_LIGHT_BG;
+    --lightest-bg: #PLACEHOLDER_FOR_LIGHTEST_BG;
+    --description: #PLACEHOLDER_FOR_DESCRIPTION;
+    --title: #PLACEHOLDER_FOR_TITLE;
+}
+
+html, body {
+    margin: 0;
+    height: 100vh;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--title);
+}
+
+ul {
+    list-style: none;
+    margin-left: -40px;
+}
+
+b {
+    font-size: 17px;
+}
+
+/* Stylizing the browser's default Scrollbar */
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--light-bg) var(--primary);
+    scrollbar-track-color: var(--light-bg);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--background);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--light-bg);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--lightest-bg);
+    border-radius: 14px;
+    border: 1px dashed var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
+}
