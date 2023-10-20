@@ -1,0 +1,19 @@
+/* This will style the text being typed */
+.react-simple-typewriter {
+  color: var(--title);
+  text-align: start;
+  font-size: 6.5vw;
+  margin-top: -30px;
+}
+
+/* This will style the cursor */
+.react-simple-typewriter-cursor {
+  color: var(--primary);
+  padding-left: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+  .react-simple-typewriter {
+      font-size: 6.5vw;
+  }
+}

@@ -13,7 +13,6 @@
     "particles.js": "^2.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-typewriter": "^0.4.1",
     "tailwind": "^4.0.0"
   },
   "devDependencies": {
