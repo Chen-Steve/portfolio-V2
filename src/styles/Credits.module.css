@@ -1,0 +1,14 @@
+.credits {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+  }
+  
+  .ending-credits {
+    font-family: var(--font-ntr);
+    color: var(--description);
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
