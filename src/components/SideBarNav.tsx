@@ -21,10 +21,8 @@ const SidebarNav: FC = () => {
       <div className={styles["sidebar-links"]}>
         {navlinks.map((link) => (
           <div key={link.id}>
-            <Link href={`#${link.id}`}>
-              <a className={link.id === activeKey ? styles.active : ""}>
-                /{link.label}
-              </a>
+            <Link href={`#${link.id}`} className={link.id === activeKey ? styles.active : ""}>
+              /{link.label}
             </Link>
           </div>
         ))}
