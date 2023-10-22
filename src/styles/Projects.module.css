@@ -1,11 +1,11 @@
 .projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 15%;
-    padding-right: 25%;
-    min-height: 60vh;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15%;
+  padding-right: 25%;
+  min-height: 60vh;
+}
   
   .spotlight-container {
     display: flex;
@@ -16,6 +16,13 @@
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-gap: 10px;
   }
+
+  .projects-card:hover,
+  .projects-card:focus {
+      transform: translateY(-7px);
+      background-color: var(--lightest-bg);
+  }
+
   @media (max-width: 1080px) {
     .projects-grid {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

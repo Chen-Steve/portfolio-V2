@@ -1,5 +1,6 @@
-/* global.css */
+/* Global Variables */
 :root {
+    /* TODO: Replace these placeholders with actual values */
     --primary: #PLACEHOLDER_FOR_PRIMARY;
     --background: #PLACEHOLDER_FOR_BACKGROUND;
     --light-bg: #PLACEHOLDER_FOR_LIGHT_BG;
@@ -8,16 +9,10 @@
     --title: #PLACEHOLDER_FOR_TITLE;
 }
 
+/* Reset and Base Styles */
 html, body {
     margin: 0;
     height: 100vh;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-html {
     scroll-behavior: smooth;
 }
 
@@ -39,27 +34,30 @@ b {
     font-size: 17px;
 }
 
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 /* Stylizing the browser's default Scrollbar */
 
 /* Firefox */
-* {
+html {
     scrollbar-width: thin;
     scrollbar-color: var(--light-bg) var(--primary);
-    scrollbar-track-color: var(--light-bg);
 }
 
 /* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
     background-color: var(--background);
 }
 
-*::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: var(--light-bg);
     border-radius: 5px;
 }
 
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--lightest-bg);
     border-radius: 14px;
     border: 1px dashed var(--primary);

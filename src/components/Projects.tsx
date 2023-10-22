@@ -1,3 +1,6 @@
+import React from "react";
+import styles from "@/styles/Projects.module.css";
+
 const PROJECTS = [
     { title: "Project 1", description: "Description" },
     { title: "Project 2", description: "Description" },
@@ -6,14 +9,14 @@ const PROJECTS = [
 
 const Projects: React.FC = () => {
     return (
-        <div id="projects" className="flex-1 space-y-8">
+        <section id="projects" className={styles.projectsContainer}>
             {PROJECTS.map(project => (
-                <div key={project.title} className="bg-white p-6 rounded-lg shadow-md w-80 h-40 lg:w-96 lg:h-56">
-                    <h2 className="text-2xl font-semibold mb-4">{project.title}</h2>
-                    <p>{project.description}</p>
-                </div>
+                <article key={project.title} className={styles.projectCard}>
+                    <h3 className={styles.projectTitle}>{project.title}</h3>
+                    <p className={styles.projectDescription}>{project.description}</p>
+                </article>
             ))}
-        </div>
+        </section>
     );
 };
 

@@ -6,14 +6,15 @@ import Link from "next/link";
 const About: React.FC = () => {
   const one = (
     <p>
-      I am a undergrad <b>Computer Science student</b> at{" "}
-      <Link
+      I am an undergrad <b>Computer Science student</b> at{" "}
+      <a
         className={styles["about-description"]}
         href="https://illinois.edu/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         UIUC
-      </Link>
+      </a>
       . My particular focus lies at the intersection of creating machine learning applications and enhancing cybersecurity.
     </p>
   );
@@ -50,10 +51,10 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div id="about" className={styles.about}>
-      <div className={styles["section-header"]}>
+    <section id="about" className={styles.about}>
+      <header className={styles["section-header"]}>
         <span className={styles["section-title"]}>/ about me</span>
-      </div>
+      </header>
       <div className={styles["about-content"]}>
         <div className={styles["about-description"]}>
           {one}
@@ -75,7 +76,7 @@ const About: React.FC = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

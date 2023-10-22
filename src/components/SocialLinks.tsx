@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import styles from '@/styles/SocialLinks.module.css';
 
-interface LinkProps {
+interface SocialLinkProps {
     href: string;
     label: string;
     image: string;
 }
 
-const Link: React.FC<LinkProps> = ({ href, label, image }) => {
+const SocialLink: React.FC<SocialLinkProps> = ({ href, label, image }) => {
     return (
         <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} title={label}>
             <Image src={image} alt={label} width={40} height={40} />
@@ -15,7 +15,7 @@ const Link: React.FC<LinkProps> = ({ href, label, image }) => {
     );
 };
 
-const SOCIAL_LINKS: LinkProps[] = [
+const SOCIAL_LINKS: SocialLinkProps[] = [
     { href: "mailto:zhangc2@illinois.edu", label: "Gmail", image: "/images/mail.svg" },
     { href: "https://www.linkedin.com/in/chensteven2077", label: "LinkedIn Profile", image: "/images/linkedin.svg" },
     { href: "https://github.com/Chen-Steve", label: "GitHub Profile", image: "/images/github.svg" },
@@ -26,7 +26,7 @@ const SocialLinks: React.FC = () => {
     return (
         <div className={styles.container}>
             {SOCIAL_LINKS.map(link => (
-                <Link key={link.href} {...link} />
+                <SocialLink key={link.href} {...link} />
             ))}
         </div>
     );

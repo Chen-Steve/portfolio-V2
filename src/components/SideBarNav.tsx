@@ -1,24 +1,31 @@
-// "use client";
-
 import { useState, FC } from "react";
 import styles from "@/styles/SideBarNav.module.css";
 import Link from "next/link";
 
-const SidebarNav: FC = () => {
-  const [activeKey, setActiveKey] = useState<string>("1");
+interface NavLink {
+  id: string;
+  label: string;
+}
 
-  const navlinks: [string, string][] = [
-    ["intro", "home"],
-    ["about", "about"],
-    ["projects", "projects"],
+const SidebarNav: FC = () => {
+  const [activeKey, setActiveKey] = useState<string>("intro");
+
+  const navlinks: NavLink[] = [
+    { id: "intro", label: "home" },
+    { id: "about", label: "about" },
+    { id: "projects", label: "projects" },
   ];
 
   return (
     <div className={styles["sidebar-nav"]}>
       <div className={styles["sidebar-links"]}>
-        {navlinks.map((linkArr, i) => (
-          <div key={i}>
-            <Link href={`#${linkArr[0]}`}>/{linkArr[1]}</Link>
+        {navlinks.map((link) => (
+          <div key={link.id}>
+            <Link href={`#${link.id}`}>
+              <a className={link.id === activeKey ? styles.active : ""}>
+                /{link.label}
+              </a>
+            </Link>
           </div>
         ))}
       </div>
