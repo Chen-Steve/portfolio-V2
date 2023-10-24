@@ -1,8 +1,9 @@
 .about {
   padding-left: 15%;
   padding-right: 25%;
-  padding-top: -20%;
+  padding-top: 0;
   padding-bottom: 5%;
+  margin: auto;
 }
 
 .section-header {
