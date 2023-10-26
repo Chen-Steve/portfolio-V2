@@ -8,9 +8,9 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const Projects = () => {
   const projects = [
-    { title: 'Secure Surf', description: 'Description 1', imageUrl: '/public/images/website.png' },
-    { title: 'GeoHarbin', description: 'Description 2', imageUrl: '/public/images/website.png' },
-    { title: 'My Website!', description: 'Description 2', imageUrl: '/public/images/website.png' }
+    { title: 'GeoHarbin', description: 'A GeoSpatial framework for the city of Harbin', imageUrl: '/images/geoHarbin.png' },
+    { title: 'Secure Surf', description: 'Web app + Twilio text bot for testing domain safety. Trained with gpt-3.5-turbo', imageUrl: '/images/secure_surf.png' },
+    { title: 'My personal Website!', description: 'Built with Next.js, TypeScript and React.js', imageUrl: '/images/website.png' }
     // more projects in the future
   ];
 

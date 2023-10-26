@@ -15,11 +15,14 @@ const Intro: React.FC = () => {
             />
           </span>
         </div>
-      <div className={styles["intro-subtitle"]}>
-        <Typewriter 
-          words={['Good things take time...', 'finishing soon!']}         
-        />   
-        </div>
+        <div className={styles["intro-subtitle"]}>
+          <Typewriter 
+        words={['Check out my Newsletter!']}
+        />
+      </div>
+      <div className={styles["intro-link"]}>
+        <a href="https://thedigitalpulse.substack.com/" target="_blank" rel="noopener noreferrer">The Digital Pulse</a>    
+      </div>
       <div className={styles["intro-desc"]}>
         I&apos;m an aspiring software engineer with a passion for full-stack
         development, artificial intelligence, and machine learning. Let&apos;s
