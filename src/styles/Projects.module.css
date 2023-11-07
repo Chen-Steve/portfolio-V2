@@ -9,6 +9,8 @@
 
 .spotlight-container {
   display: flex;
+  flex-direction: column; /* Change to column for mobile */
+  align-items: center; /* Center the carousel items */
 }
 
 .projects-grid {
@@ -16,6 +18,7 @@
   grid-template-columns: repeat(3, minmax(300px, 1fr));
   grid-gap: 10px;
 }
+
 @media (max-width: 1080px) {
   .projects-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -25,7 +28,7 @@
 .section-header {
   display: flex;
   padding-bottom: 42px;
-  width: 100vw;
+  width: 100%; /* Use 100% instead of 100vw to avoid horizontal scrolling */
   align-items: baseline;
 }
 
@@ -33,7 +36,6 @@
   content: "";
   display: block;
   width: 300px;
-  margin-top: 39px;
   height: 1px;
   margin-left: 20px;
   background-color: var(--lightest-bg);
@@ -46,79 +48,50 @@
   font-weight: bold;
 }
 
-.projects-card {
-  position: relative;
-  cursor: default;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  height: 100%;
-  padding: 2rem 1.75rem;
-  background-color: var(--light-bg);
-  border-radius: 16px;
-  line-height: 1.5;
-}
-
-.projects-card:hover {
-  transform: translateY(-7px);
-  background-color: var(--lightest-bg);
-}
-
-.card-header {
-  margin-top: -20px;
-  display: flex;
-  padding: 1.25em 0 !important;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom: none !important;
-}
-
-.folder-icon {
-  color: var(--primary);
-}
-
-.card-title {
-  font-family: var(--font-ntr);
-  color: var(--title);
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 0.75rem;
-}
-
-.card-desc {
-  font-family: var(--font-ntr);
-  font-size: 17px;
-  color: var(--description);
-  padding-bottom: 40px;
-}
-
-.card-tech {
-  font-family: var(--font-ntr);
-  color: var(--description);
-  font-size: 16px;
-}
-
 @media only screen and (max-width: 600px) {
   .projects {
-    height: unset;
-    padding-left: unset;
-    padding-right: unset;
+    min-height: unset;
+    padding: 10px; /* Reduce padding for smaller screens */
   }
-  .carousel {
-    display: none;
+  
+  /* No longer hiding the carousel */
+  .carousel .carousel-inner .carousel-item img {
+    width: 100%; /* Set carousel image width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .carousel .carousel-control-prev,
+  .carousel .carousel-control-next {
+    display: none; /* Optionally hide the carousel controls on small screens */
   }
 
   .section-header {
-    width: unset;
+    padding-bottom: 20px; /* Reduce padding for the header */
   }
 
   .section-header::after {
-    display: none;
+    /* Adjust or hide the decorative after element as needed */
+    width: 50px; /* Shorten the width */
+    margin-left: 10px; /* Adjust left margin */
   }
 
   .section-title {
-    font-size: 32px;
+    font-size: 28px; /* Reduce title font size for smaller screens */
+  }
+
+  .projects-card {
+    padding: 1rem; /* Adjust card padding */
+  }
+
+  .card-title {
+    font-size: 20px; /* Adjust card title font size */
+  }
+
+  .card-desc {
+    font-size: 15px; /* Adjust card description font size */
+  }
+
+  .card-tech {
+    font-size: 14px; /* Adjust card tech font size */
   }
 }

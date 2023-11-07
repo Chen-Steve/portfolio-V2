@@ -11,10 +11,7 @@ const Projects = () => {
     { title: 'Secure Surf', description: 'Web app + Twilio text bot for testing domain safety. Trained with gpt-3.5-turbo', imageUrl: '/images/secure_surf.png', url: 'https://github.com/shashankdatta/secure-surf'},
     { title: 'My personal Website!', description: 'Built with Next.js, TypeScript and React.js', imageUrl: '/images/website.png' },
     { title: 'GeoHarbin', description: 'A GeoSpatial framework for the city of Harbin using geoPandas', imageUrl: '/images/geoHarbin.png', url: 'https://github.com/Chen-Steve/GeoSpatial-Framework-Tool'},
-
-    // more projects in the future
   ];
-
   return (
     <div id="projects" className={styles.projects}>
       <div className={styles["section-header"]}>

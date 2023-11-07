@@ -49,7 +49,34 @@
   }
   
   @media only screen and (max-width: 600px) {
-    .carousel {
-      display: none;
+    .carousel.slide {
+      max-width: unset;
+      margin-top: 0;
+      margin-bottom: 30px;
     }
-  }
+    
+    .carousel-inner {
+      border-radius: 10px;
+      box-shadow: none; 
+    }
+    
+    .carousel-caption {
+      max-width: 90%;
+      left: 5% !important; 
+      right: 5% !important;
+      bottom: 20px !important; 
+    }
+    
+    .carousel-caption h3 {
+      font-size: 5vw; 
+    }
+    
+    .carousel-caption div {
+      font-size: 4vw;
+    }
+    
+    .carousel-indicators {
+      display: flex; 
+    }
+  }  
+  

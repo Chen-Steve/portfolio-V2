@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 10%;
-  padding-top: 10%;
+  padding: 10% 10% 0 10%; /* Shorthand for padding-top and padding-left */
   min-height: 100vh;
 }
 
@@ -12,7 +11,7 @@
   font-family: var(--font-ntr);
   color: rgb(219, 214, 196);
   font-weight: 300;
-  font-size: 2.5vw;
+  font-size: 2.5rem; /* Use rem for scalability */
 }
 
 .cmd-style {
@@ -24,16 +23,12 @@
   padding-bottom: 2%;
 }
 
-.intro-title {
-  font-family: var(--font-ntr);
-  font-size: 6.5vw;
-}
-
+.intro-title,
 .intro-name {
   font-family: var(--font-ntr);
-  color: var(--primary);
-  font-weight: bold;
-  font-size: 6.5vw;
+  color: var(--primary); /* Assuming .intro-name color should be primary */
+  font-weight: bold; /* Assuming you want the title bold as well */
+  font-size: 6.5rem; /* Use rem for scalability */
 }
 
 .intro-subtitle {
@@ -41,54 +36,56 @@
   font-family: var(--font-ntr);
   color: var(--description);
   font-weight: 300;
-  font-size: 3.5vw;
+  font-size: 3.5rem; /* Use rem for scalability */
 }
 
 .intro-desc {
   color: var(--description);
   font-family: var(--font-ntr);
-  font-size: 22px;
-  max-width: 40%;
-  text-align: flex-start;
+  font-size: 1.375rem; /* 22px to rem */
+  max-width: 600px; /* max-width in px for better control */
+  text-align: start;
   padding-bottom: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .intro {
-    min-height: unset;
-    padding-left: unset;
-    margin: 0;
+    padding: 5% 5% 0 5%; /* Reduced padding for smaller screens */
     align-items: center;
   }
 
-  .cmd-style {
-    justify-content: center;
-  }
-
-  .intro-title {
-    font-size: 6.5vw;
-  }
-
+  .intro-title,
   .intro-name {
-    font-size: 6.5vw;
+    font-size: 8vw; /* Increase base font-size for smaller screens if needed */
   }
 
   .intro-subtitle {
-    margin: 0;
-    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 5vw; /* Increase base font-size for smaller screens if needed */
     text-align: center;
   }
 
   .intro-desc {
-    font-size: 19px;
+    font-size: 4vw; /* Increase base font-size for smaller screens if needed */
+    max-width: 85%; /* Increased max-width for mobile devices */
+    padding: 10px 0; /* Adjust padding */
     text-align: center;
-    max-width: unset;
-    padding-top: 10px;
-    padding-bottom: 40px;
   }
+}
 
-  .content-btn-box {
-    justify-content: center;
-    align-items: center;
+@media only screen and (max-width: 600px) {
+  /* You can even have a more specific query for very small screens */
+
+  .intro-link,
+  .intro-title,
+  .intro-name,
+  .intro-subtitle,
+  .intro-desc {
+    font-size: 6vw; /* Adjust font size for very small screens */
+  }
+  
+  .intro-desc {
+    max-width: 90%; /* Further increased max-width for very narrow screens */
   }
 }
