@@ -3,14 +3,15 @@ import Image from "next/image";
 import styles from "@/styles/Projects.module.css";
 import "@/styles/Carousel.css";
 import Carousel from "react-bootstrap/Carousel";
-import SocialLinks from "@/components/SocialLinks";
 import "bootstrap/dist/css/bootstrap.css";
 
 const Projects = () => {
   const projects = [
-    { title: 'GeoHarbin', description: 'A GeoSpatial framework for the city of Harbin', imageUrl: '/images/geoHarbin.png' },
-    { title: 'Secure Surf', description: 'Web app + Twilio text bot for testing domain safety. Trained with gpt-3.5-turbo', imageUrl: '/images/secure_surf.png' },
-    { title: 'My personal Website!', description: 'Built with Next.js, TypeScript and React.js', imageUrl: '/images/website.png' }
+    { title: 'Servicemen to Scholars', description: 'A non-profit MENN stack website + gpt-4 for tailoring personal scholarships & grants', imageUrl: '/images/s2s.png', url: 'https://servicemen-to-scholars.vercel.app/'},
+    { title: 'Secure Surf', description: 'Web app + Twilio text bot for testing domain safety. Trained with gpt-3.5-turbo', imageUrl: '/images/secure_surf.png', url: 'https://github.com/shashankdatta/secure-surf'},
+    { title: 'My personal Website!', description: 'Built with Next.js, TypeScript and React.js', imageUrl: '/images/website.png' },
+    { title: 'GeoHarbin', description: 'A GeoSpatial framework for the city of Harbin using geoPandas', imageUrl: '/images/geoHarbin.png', url: 'https://github.com/Chen-Steve/GeoSpatial-Framework-Tool'},
+
     // more projects in the future
   ];
 
@@ -23,6 +24,7 @@ const Projects = () => {
         <Carousel>
           {projects.map((project, index) => (
             <Carousel.Item key={index}>
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
               <Image
                 src={project.imageUrl}
                 alt={project.title}
@@ -44,6 +46,7 @@ const Projects = () => {
                   <div>{project.description}</div>
                 </Carousel.Caption>
               </div>
+              </a>
             </Carousel.Item>
           ))}
         </Carousel>
