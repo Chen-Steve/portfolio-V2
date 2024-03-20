@@ -7,16 +7,11 @@ import "bootstrap/dist/css/bootstrap.css";
 
 const Projects = () => {
   const projects = [
-    {
-      title: 'CPU Monitor Electron DeskApp',
-      description: 'A cross-platform desktop application built with Electron.js.',
-      imageUrl: '/images/cpuMonitor.png', 
-      url: 'https://drive.google.com/drive/folders/1CdnR0ll3LlbUhr-AncfTZts2DauDL7S6?usp=sharing'
-    },
+    { title: 'CPU Monitor Electron DeskApp', description: 'A cross-platform desktop application built with Electron.js.', imageUrl: '/images/cpuMonitor.png', url: 'https://drive.google.com/drive/folders/1CdnR0ll3LlbUhr-AncfTZts2DauDL7S6?usp=sharing'},
     { title: 'Servicemen to Scholars', description: 'A non-profit MENN stack website + gpt-4 for tailoring personal scholarships & grants', imageUrl: '/images/s2s.png', url: 'https://servicemen-to-scholars.vercel.app/'},
     { title: 'Secure Surf', description: 'Web app + Twilio text bot for testing domain safety. Trained with gpt-3.5-turbo', imageUrl: '/images/secure_surf.png', url: 'https://github.com/shashankdatta/secure-surf'},
     { title: 'My personal Website!', description: 'Built with Next.js, TypeScript and React.js', imageUrl: '/images/website.png' },
-    { title: 'GeoHarbin', description: 'A GeoSpatial framework for the city of Harbin using geoPandas', imageUrl: '/images/geoHarbin.png', url: 'https://github.com/Chen-Steve/GeoSpatial-Framework-Tool'},
+    { title: 'SpoonFul', description: 'A fullstack website to reduce household waste', imageUrl: '/images/SpoonFul.png', url: 'https://github.com/Chen-Steve/SpoonFulWeb'},
   ];
   return (
     <div id="projects" className={styles.projects}>
